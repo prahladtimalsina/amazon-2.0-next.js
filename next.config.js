@@ -13,7 +13,7 @@ module.exports = {
       FB_APP_ID: '415724632408061'
   },
     images: {
-    domains: ['localhost'],
+    domains: ['localhost','fakestoreapi.com'],
   },
 
 };
