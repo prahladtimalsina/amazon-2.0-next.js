@@ -1,11 +1,28 @@
-import React from 'react'
-
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 function Banner() {
-    return (
+  return (
+    <div className="relative">
+      <Carousel
+        autoPlay
+        infiniteLoop
+        showStatus={false}
+        showIndicators={false}
+        showThumbs={false}
+        interval={5000}
+      >
         <div>
-            
+          <img loading="lazy" src="/static/images/banner/amazon1.jpg" alt="" />
         </div>
-    )
+        <div>
+          <img loading="lazy" src="/static/images/banner/amazon2.jpg" alt="" />
+        </div>
+        <div>
+          <img loading="lazy" src="/static/images/banner/amazon3.jpg" alt="" />
+        </div>
+      </Carousel>
+    </div>
+  );
 }
 
-export default Banner
+export default Banner;
