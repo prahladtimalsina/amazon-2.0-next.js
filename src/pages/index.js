@@ -25,7 +25,7 @@ export default function Home({ products }) {
 }
 
 export async function getServerSideProps(context) {
-  const useDummyData = true;
+  const useDummyData = false;
   const data = useDummyData
     ? Response
     : await fetch("https://fakestoreapi.com/products").then((response) =>
