@@ -6,7 +6,7 @@ import {
 } from "@heroicons/react/outline";
 function Header() {
   return (
-    <header>
+    <header className="sticky z-50 top-0">
       <div
         className="flex items-center bg-amazon_blue p-1
       flex-grow py-2

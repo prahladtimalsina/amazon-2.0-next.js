@@ -29,7 +29,7 @@ export async function getServerSideProps(context) {
   const data = useDummyData
     ? Response
     : await fetch("https://fakestoreapi.com/products").then((response) =>
-    response.json()
+        response.json()
       );
   return {
     props: {
@@ -37,19 +37,3 @@ export async function getServerSideProps(context) {
     },
   };
 }
-
-// export async function getServerSideProps(context) {
-//   const useDummyData = false;
-//   const startIndex = context.query.start || "0";
-//   const data = useDummyData
-//     ? Response
-//     : await fetch(
-//         `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${context.query.term}&start=${startIndex}`
-//       ).then((response) => response.json());
-
-//   return {
-//     props: {
-//       results: data,
-//     },
-//   };
-// }
