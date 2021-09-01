@@ -8,6 +8,7 @@ import { signIn, signOut, useSession } from "next-auth/client";
 import { useRouter } from "next/router";
 function Header() {
   const [session] = useSession();
+  // console.log(session.user);
   const router = useRouter();
   return (
     <header className="sticky z-50 top-0">
