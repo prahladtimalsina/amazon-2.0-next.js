@@ -5,9 +5,10 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
 import { signIn, signOut, useSession } from "next-auth/client";
-
+import { useRouter } from "next/router";
 function Header() {
   const [session] = useSession();
+  const router = useRouter();
   return (
     <header className="sticky z-50 top-0">
       <div
@@ -18,6 +19,7 @@ function Header() {
         {/* top */}
         <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
           <Image
+            onClick={() => router.push("/")}
             src="/static/images/amazon-logo.png"
             width={150}
             height={40}
@@ -48,7 +50,10 @@ function Header() {
             <p>Returns</p>
             <p className="font-extrabold md:text-sm">& orders</p>
           </div>
-          <div className="link relative flex items-center ">
+          <div
+            onClick={() => router.push("/checkout")}
+            className="link relative flex items-center "
+          >
             <span className="absolute top-0 right-0 md:right-10 h-4 w-4  bg-yellow-400 text-center rounded-full text-black font-bold">
               0
             </span>
