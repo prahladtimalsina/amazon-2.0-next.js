@@ -3,7 +3,6 @@ import Banner from "../components/Banner";
 import Header from "../components/Header";
 import ProductFeed from "../components/ProductFeed";
 import Response from "../../Response";
-
 export default function Home({ products }) {
   // console.log(products);
   return (
