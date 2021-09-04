@@ -21,15 +21,18 @@ function Product({ id, title, price, description, category, image }) {
       id,
       title,
       price,
+      rating,
       description,
       category,
       image,
+      hasPrime,
     };
     //sending the product as an action to the redux store .. the basket slice
     dispatch(addToBasket(product));
   };
 
   return (
+    <>
     <div className="relative flex flex-col m-5 bg-white z-30 p-10">
       <p className="absolute top-2 right-2 text-sm italic text-gray-400">
         {category}
@@ -57,6 +60,7 @@ function Product({ id, title, price, description, category, image }) {
         Add to Basket
       </button>
     </div>
+    </>
   );
 }
 
