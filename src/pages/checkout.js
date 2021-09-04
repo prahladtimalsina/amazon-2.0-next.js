@@ -41,6 +41,16 @@ function Checkout() {
           </div>
         </div>
         {/* right */}
+        <div>
+          {items.length > 0 && (
+            <>
+              <h2>
+                Subtotal ({items.length} items):
+                <span></span>
+              </h2>
+            </>
+          )}
+        </div>
       </main>
     </div>
   );
