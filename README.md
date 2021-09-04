@@ -28,4 +28,4 @@ Run commands
 ![Template Screenshot](TemplateScreenshot.jpg?raw=true "Template Screenshot")
 
 ### website link 
-![https://amazon-2-0-next-js.vercel.app/] (amazon-2.0)
+![https://amazon-2-0-next-js.vercel.app/] (amazon-2.0-nextjs)
