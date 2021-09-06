@@ -1,3 +1,4 @@
+import { useSession } from "next-auth/client";
 import Image from "next/image";
 import { useSelector } from "react-redux";
 import CheckoutProduct from "../components/CheckoutProduct";
@@ -6,7 +7,8 @@ import { selectItems } from "../slices/basketSlice";
 
 function Checkout() {
   const items = useSelector(selectItems);
-  console.log(items);
+  const[session] = useSession();
+  // console.log(items);
   return (
     <div className="bg-gray-100">
       <Header />
@@ -44,10 +46,13 @@ function Checkout() {
         <div>
           {items.length > 0 && (
             <>
-              <h2>
+              <h2 classNames="whitespace-nowrap">
                 Subtotal ({items.length} items):
-                <span></span>
+                <span className="font-bold"></span>
               </h2>
+              <button className={`button mt-2 ${!session && 'from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed'}`}>
+                {!session ? "Sign in to checkout" : "Proceed to checkout"}
+              </button>
             </>
           )}
         </div>
