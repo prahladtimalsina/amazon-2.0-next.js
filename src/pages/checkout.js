@@ -16,7 +16,7 @@ function Checkout() {
       <Header />
       <main className="lg:flex max-w-screen-2xl mx-auto">
         {/* left */}
-        <div className="flex-grow m-5 shadow-sm">
+        <div className="flex flex-col m-5 shadow-sm">
           <Image
             src="/static/images/Prime-day-banner.png"
             width={1020}
@@ -55,6 +55,7 @@ function Checkout() {
                 </span>
               </h2>
               <button
+                role="link"
                 disabled={!session}
                 className={`button mt-2 ${
                   !session &&

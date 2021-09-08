@@ -728,6 +728,11 @@
   resolved "https://registry.yarnpkg.com/@sqltools/formatter/-/formatter-1.2.3.tgz#1185726610acc37317ddab11c3c7f9066966bd20"
   integrity sha512-O3uyB/JbkAEMZaP3YqyHH7TMnex7tWyCbCI4EfJdOCoN6HIhqdJBWTM6aCCiWQ/5f5wxjgU735QAIpJbjDvmzg==
 
+"@stripe/stripe-js@^1.17.1":
+  version "1.17.1"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-1.17.1.tgz#afcb7e86d0b05d1a7af53af89111abd2e8d437ae"
+  integrity sha512-c9MyDvdi5Xou0j0JPNy86NebtTDfh9o62Ifuzx6GSm2YO0oedBpy51WSyOue2L8Fb+mqESS5gd6mGVEIPUnXsA==
+
 "@tailwindcss/line-clamp@^0.2.0":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@tailwindcss/line-clamp/-/line-clamp-0.2.1.tgz#efafe556719c26a3926f0679a98307c4bc9270d2"
@@ -801,6 +806,11 @@
   version "16.7.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.7.1.tgz#c6b9198178da504dfca1fd0be9b2e1002f1586f0"
   integrity sha512-ncRdc45SoYJ2H4eWU9ReDfp3vtFqDYhjOsKlFFUDEn8V1Bgr2RjYal8YT5byfadWIRluhPFU6JiDOl0H6Sl87A==
+
+"@types/node@>=8.1.0":
+  version "16.7.13"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.7.13.tgz#86fae356b03b5a12f2506c6cf6cd9287b205973f"
+  integrity sha512-pLUPDn+YG3FYEt/pHI74HmnJOWzeR+tOIQzUx93pi9M7D8OE7PSLr97HboXwk5F+JS+TLtWuzCOW97AHjmOXXA==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -3395,6 +3405,13 @@ purgecss@^4.0.3:
     postcss "^8.2.1"
     postcss-selector-parser "^6.0.2"
 
+qs@^6.6.0:
+  version "6.10.1"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.10.1.tgz#4931482fa8d647a5aab799c5271d2133b981fb6a"
+  integrity sha512-M528Hph6wsSVOBiYUnGf+K/7w0hNshs/duGsNXPUCLH5XAqjEtiPGwNONLV0tBH8NoGb0mvD5JubnUTrujKDTg==
+  dependencies:
+    side-channel "^1.0.4"
+
 querystring-es3@0.2.1, querystring-es3@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
@@ -3936,6 +3953,14 @@ strip-ansi@^3.0.0:
   integrity sha1-ajhfuIU9lS1f8F0Oiq+UJ43GPc8=
   dependencies:
     ansi-regex "^2.0.0"
+
+stripe@^8.174.0:
+  version "8.174.0"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-8.174.0.tgz#91d2e61b0217b1ee9fde2842582e0f1cf1dddc94"
+  integrity sha512-UFU5TuYH7XwUmSllUIcIKhhsvvhhjw9D6ZwVdfB74wU4VOOaWBiQqszkw6chaEFpdulUmbcAH5eZltV3HwOi7g==
+  dependencies:
+    "@types/node" ">=8.1.0"
+    qs "^6.6.0"
 
 stubs@^3.0.0:
   version "3.0.0"
