@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import Header from "../components/Header";
 import ProductFeed from "../components/ProductFeed";
 import Response from "../../Response";
+import { getSession } from "next-auth/client";
 export default function Home({ products }) {
   // console.log(products);
   return (
@@ -24,6 +25,7 @@ export default function Home({ products }) {
 }
 
 export async function getServerSideProps(context) {
+  const session = await getSession(context);
   const useDummyData = false;
   const data = useDummyData
     ? Response
@@ -33,6 +35,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       products: data,
+      session,
     },
   };
 }
