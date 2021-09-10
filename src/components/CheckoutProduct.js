@@ -52,9 +52,10 @@ function CheckoutProduct({
         {hasPrime && (
           <div className="flex items-center space-x-2">
             <img
+              
+              src="/static/images/Prime-tag-.png"
               loading="lazy"
               className="w-12"
-              src="/static/images/Prime-tag-.png"
               alt=""
             />
             <p className="text-xs text-gray-500">FREE Next-day Delivery</p>

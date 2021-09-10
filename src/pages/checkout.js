@@ -30,19 +30,18 @@ function Checkout() {
   return (
     <div className="bg-gray-100">
       <Header />
-      <main className="lg:flex max-w-screen-2xl mx-auto">
-        {/* left */}
-        <div className="flex flex-col m-5 shadow-sm">
+      <main className="lg:flex max-w-screen-2x mx-auto">
+        <div className="flex-grow m-5 shadow-sm">
           <Image
-            src="/static/images/Prime-day-banner.png"
+            src="https://links.papareact.com/ikj"
             width={1020}
             height={250}
             objectFit="contain"
           />
           <div className="flex flex-col p-5 space-y-10 bg-white">
-            <h1 className="text-3xl border-b pb-4">
+            <h1 className="text-3xl border-b p-4">
               {items.length === 0
-                ? "Your Amazon Basket is Empty"
+                ? "Your Amazon basket is empty"
                 : "Shopping Basket"}
             </h1>
             {items.map((item, i) => (
@@ -50,33 +49,32 @@ function Checkout() {
                 key={i}
                 id={item.id}
                 title={item.title}
-                price={item.price}
                 description={item.description}
                 category={item.category}
                 image={item.image}
+                price={item.price}
                 rating={item.rating}
                 hasPrime={item.hasPrime}
               />
             ))}
           </div>
         </div>
-        {/* right */}
         <div className="flex flex-col bg-white p-10 shadow-md">
           {items.length > 0 && (
             <>
-              <h2 classNames="whitespace-nowrap">
-                Subtotal ({items.length} items):{" "}
+              <h2 className="whitespace-nowrap">
+                Subtotal ({items.length} items) :
                 <span className="font-bold">
-                  <Currency quantity={total} currency="GBP" />
+                  <Currency quantity={total} currency="USD" />
                 </span>
               </h2>
               <button
-                onClick={createCheckoutSession}
                 role="link"
+                onClick={createCheckoutSession}
                 disabled={!session}
                 className={`button mt-2 ${
                   !session &&
-                  "from-gray-300 to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed"
+                  "from-gray-300 to to-gray-500 border-gray-200 text-gray-300 cursor-not-allowed"
                 }`}
               >
                 {!session ? "Sign in to checkout" : "Proceed to checkout"}
