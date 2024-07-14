@@ -14,7 +14,7 @@
 
 # production
 /build
-/permissions.json
+permissions.json
 # misc
 .DS_Store
 *.pem
